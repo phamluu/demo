@@ -134,7 +134,8 @@
             $(".viewport img").attr("src", src);
         })
         $(".attribule button").on("click", function(){
-            $(this).toggleClass("selected");
+            $(this).parent().find('button').removeClass("selected");
+            $(this).addClass("selected");
             var datafor = $(this).attr('data-for');
             $("." + datafor).click();
         })
