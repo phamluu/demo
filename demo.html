@@ -114,28 +114,6 @@
 </div>
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
-        $(".search-toggle-open").on("click", function(){
-        $("#search-drawer").addClass("show-drawer active pop-animated");
-        })
-        $(".search-toggle-close").on("click", function(){
-            $("#search-drawer").removeClass("show-drawer active pop-animated");
-        })
-        $(".drawer-nav-drop-wrap button").on("click", function(){
-            var submenu = $(this).parent().next();
-            submenu.slideToggle('',function(){
-                if($(this).is(':hidden')){
-                    $(this).prev().find('button').attr('aria-expanded', false);
-                }else{
-                    $(this).prev().find('button').attr('aria-expanded', true);
-                }
-            });
-        })
-            $(".menu-toggle-close").on("click", function(){
-                $("#mobile-drawer").toggleClass('show-drawer active');
-            })
-        $("#mobile-toggle").on("click", function(){
-            $("#mobile-drawer").addClass("show-drawer active");
-        })
         let plus_btns = document.querySelectorAll('#plus-button');
         let minus_btns = document.querySelectorAll('#minus-button');
         let qty_inputs = document.querySelectorAll('#quantity');
@@ -161,5 +139,4 @@
             $("." + datafor).click();
         })
     });
-    
 </script>
