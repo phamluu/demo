@@ -1,0 +1,164 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    .flex-row{display:flex}.product{clear:both}.product .body{margin:20px 0}.product .body .qty input{width:45px;text-align:center}.product .body .buy-now{margin-left:10px;background:#ff5e00;padding:0 15px;color:#fff;border-radius:5px;font-weight:700;align-items:center;display:flex}.product .body .social{margin-top:30px}.product .body .social .tSCitv{width:25px;height:25px;padding:0;border:0;margin-left:5px;position:relative;overflow:visible;outline:0}.product .body .social .sprite-product-sharing-fm{background-position:0 -100%}.product .body .social .sprite-product-sharing-fb{background-position:0 0}.product .body .social .sprite-product-sharing{background-image:url(../images/icon-social.png);background-size:100%;background-color:initial}.product .body .social .sprite-product-sharing-pinterest{background-position:0 -300%}.product .body .social .sprite-product-sharing-twitter{background-position:0 -400%}.product .viewport img{width:100%}.product ol{display:flex;padding:0;width:90%;margin:0 auto;margin-top:-30px}.product ol li{float:left;list-style-type:none;width:25%;height:65px;overflow:hidden}.product ol li img{height:65px;width:90%;border:#b9a8a880 1px solid;margin:0 auto;border-radius:5px}.product ol li img.active{border:#ff5e00 1px solid}.product .price{font-weight:700;font-size:23px;padding:10px 0;color:#ff5e00}.product .attribule ul{margin:0;display:table;padding:0}.product .attribule ul li{display:flex;margin:10px 0;overflow:hidden;clear:both}.product .attribule ul li label{font-weight:600;width:110px}.product .attribule ul li .value{display:flex}.product .attribule ul li .value button{background:#fff;border:#b5b1b1 1px solid;margin:0 5px;color:#625f5f;border-radius:5px}.product .attribule ul li .value .selected{color:var(--brand-primary-color,#ee4d2d);border-color:#ee4d2d!important}
+</style>
+<div class="product">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="body">
+                    <div class="viewport">
+                        <img src="assets/images/tmp/giay-1.webp"/>
+                    </div>
+                    <div class="control-nav">
+                        <ol>
+                            <li><img  class="a" src="assets/images/tmp/giay-1.webp"/></li>
+                            <li><img  class="b" src="assets/images/tmp/giay-2.webp"/></li>
+                            <li><img  class="c" src="assets/images/tmp/giay-3.webp"/></li>
+                            <li><img  class="d" src="assets/images/tmp/giay-4.webp"/></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="body">
+                        <h1>Áo thun nam</h1>
+                        <div class="form-group">
+                            <div class="price ">10.000.000<sup>đ</sup> - 15.000.000<sup>đ</sup></div>
+                        </div>
+                        <div class="attribule form-group">
+                            <ul>
+                                <li><label>Mã</label>
+                                    <div class="value">NBC</div>
+                                </li>
+                                <li><label>Danh mục</label>
+                                    <div class="value">Giầy thể thao</div>
+                                </li>
+                                <li>
+                                    <label>Kích thước</label>
+                                    <div class="value">
+                                        <button>L</button>
+                                        <button>M</button>
+                                        <button>XL</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label>Màu sắc</label>
+                                    <div class="value">
+                                        <button style="background:white;" data-for="a"></button>
+                                        <button style="background:black" data-for="b"></button>
+                                        <button style="background: red;" data-for="c"></button>
+                                        <button style="background: yellow;" data-for="d"></button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label>Màu dây</label>
+                                    <div class="value">
+                                        <button style="background:white;" data-for="a"></button>
+                                        <button style="background:black" data-for="b"></button>
+                                        <button style="background: red;" data-for="c"></button>
+                                        <button style="background: yellow;" data-for="d"></button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label>Màu cổ dây</label>
+                                    <div class="value">
+                                        <button style="background:white;" data-for="a"></button>
+                                        <button style="background:black" data-for="b"></button>
+                                        <button style="background: red;" data-for="c"></button>
+                                        <button style="background: yellow;" data-for="d"></button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label>Màu đế</label>
+                                    <div class="value">
+                                        <button style="background:white;" data-for="a"></button>
+                                        <button style="background:black" data-for="b"></button>
+                                        <button style="background: red;" data-for="c"></button>
+                                        <button style="background: yellow;" data-for="d"></button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="form-group flex-row">
+                            <div class="qty" data-title="Qty">
+                                <!-- Input Order -->
+                                <div class="input-group quantity-area">
+                                    <button type="button" class="btn  btn-number" data-type="minus" data-field="quant[1]" id="minus-button"
+                                        for="quantity">-</button>
+                                    <input type="text" name="quant[1]" id="quantity" class="input-number" data-min="1" data-max="100" value="1">
+                                    <button type="button" class="btn  btn-number" data-type="plus" data-field="quant[1]" id="plus-button"
+                                        for="quantity">+</button>
+                                </div>
+                                <!--/ End Input Order -->
+                            </div>
+                            <buton class="buy-now">Mua hàng</buton>
+                        </div>
+                            <div class="form-group social">
+                                <div class="Ne7dEf">Chia sẻ:</div>
+                                <button class="sprite-product-sharing sprite-product-sharing-fm tSCitv"
+                                    aria-label="Share on Messenger"></button>
+                                    <button class="sprite-product-sharing sprite-product-sharing-fb tSCitv"
+                                    aria-label="Share on Facebook"></button>
+                                    <button
+                                    class="sprite-product-sharing sprite-product-sharing-pinterest tSCitv"
+                                    aria-label="Share on Pinterest"></button>
+                                    <button
+                                    class="sprite-product-sharing sprite-product-sharing-twitter tSCitv" aria-label="Share on Twitter"></button>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $(".search-toggle-open").on("click", function(){
+        $("#search-drawer").addClass("show-drawer active pop-animated");
+        })
+        $(".search-toggle-close").on("click", function(){
+            $("#search-drawer").removeClass("show-drawer active pop-animated");
+        })
+        $(".drawer-nav-drop-wrap button").on("click", function(){
+            var submenu = $(this).parent().next();
+            submenu.slideToggle('',function(){
+                if($(this).is(':hidden')){
+                    $(this).prev().find('button').attr('aria-expanded', false);
+                }else{
+                    $(this).prev().find('button').attr('aria-expanded', true);
+                }
+            });
+        })
+            $(".menu-toggle-close").on("click", function(){
+                $("#mobile-drawer").toggleClass('show-drawer active');
+            })
+        $("#mobile-toggle").on("click", function(){
+            $("#mobile-drawer").addClass("show-drawer active");
+        })
+        let plus_btns = document.querySelectorAll('#plus-button');
+        let minus_btns = document.querySelectorAll('#minus-button');
+        let qty_inputs = document.querySelectorAll('#quantity');
+        plus_btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.previousElementSibling.value++;
+            })
+        })
+        minus_btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.nextElementSibling.value = (btn.nextElementSibling.value == 0) ? 0 : btn.nextElementSibling.value - 1;
+            })
+        })
+        $(".control-nav img").on("click", function(){
+            var src = $(this).attr("src");
+            $(".control-nav img").removeClass('active');
+            $(this).addClass("active");
+            $(".viewport img").attr("src", src);
+        })
+        $(".attribule button").on("click", function(){
+            $(this).toggleClass("selected");
+            var datafor = $(this).attr('data-for');
+            $("." + datafor).click();
+        })
+    });
+    
+</script>
