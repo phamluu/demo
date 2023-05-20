@@ -13,10 +13,15 @@
                     </div>
                     <div class="control-nav">
                         <ol>
-                            <li><img  class="a" src="assets/images/tmp/giay-1.webp"/></li>
-                            <li><img  class="b" src="assets/images/tmp/giay-2.webp"/></li>
-                            <li><img  class="c" src="assets/images/tmp/giay-3.webp"/></li>
-                            <li><img  class="d" src="assets/images/tmp/giay-4.webp"/></li>
+                            <li><img  class="T-T active" src="assets/images/tmp/giay-1.webp"/></li>
+                            <li><img  class="T-D" src="assets/images/tmp/giay-2.webp"/></li>
+                            <li><img  class="T-V" src="assets/images/tmp/giay-3.webp"/></li>
+                            <li><img  class="D-T" src="assets/images/tmp/giay-4.webp"/></li>
+                            <li><img  class="D-D" src="assets/images/tmp/giay-1.webp"/></li>
+                            <li><img  class="D-V" src="assets/images/tmp/giay-2.webp"/></li>
+                            <li><img  class="V-T" src="assets/images/tmp/giay-3.webp"/></li>
+                            <li><img  class="V-D" src="assets/images/tmp/giay-1.webp"/></li>
+                            <li><img  class="V-V" src="assets/images/tmp/giay-2.webp"/></li>
                         </ol>
                     </div>
                 </div>
@@ -45,38 +50,35 @@
                                 </li>
                                 <li>
                                     <label>Màu sắc</label>
-                                    <div class="value">
-                                        <button style="background:white;" data-for="a"></button>
-                                        <button style="background:black" data-for="b"></button>
-                                        <button style="background: red;" data-for="c"></button>
-                                        <button style="background: yellow;" data-for="d"></button>
+                                    <div class="value mausac">
+                                        <button style="background:white;" value="T" class="selected"></button>
+                                        <button style="background: red;" value="D"></button>
+                                        <button style="background: yellow;" value="V"></button>
                                     </div>
                                 </li>
                                 <li>
                                     <label>Màu dây</label>
-                                    <div class="value">
-                                        <button style="background:white;" data-for="a"></button>
-                                        <button style="background:black" data-for="b"></button>
-                                        <button style="background: red;" data-for="c"></button>
-                                        <button style="background: yellow;" data-for="d"></button>
+                                    <div class="value mauday">
+                                        <button style="background:white;" value="T" class="selected"></button>
+                                        <button style="background: red;" value="D"></button>
+                                        <button style="background: yellow;" value="V"></button>
                                     </div>
                                 </li>
                                 <li>
                                     <label>Màu cổ dây</label>
                                     <div class="value">
-                                        <button style="background:white;" data-for="a"></button>
-                                        <button style="background:black" data-for="b"></button>
-                                        <button style="background: red;" data-for="c"></button>
-                                        <button style="background: yellow;" data-for="d"></button>
+                                        <button style="background:white;"></button>
+                                        <button style="background: red;"></button>
+                                        <button style="background: yellow;"></button>
                                     </div>
                                 </li>
                                 <li>
                                     <label>Màu đế</label>
                                     <div class="value">
-                                        <button style="background:white;" data-for="a"></button>
-                                        <button style="background:black" data-for="b"></button>
-                                        <button style="background: red;" data-for="c"></button>
-                                        <button style="background: yellow;" data-for="d"></button>
+                                        <button style="background:white;"></button>
+                                        <button style="background:black"></button>
+                                        <button style="background: red;"></button>
+                                        <button style="background: yellow;"></button>
                                     </div>
                                 </li>
                             </ul>
@@ -112,6 +114,53 @@
         </div>
     </div>
 </div>
+
+<div class="form-grou">
+    <label>Màu sắc</label>
+    <input type="text" value="T" name="mausac"/>
+</div>
+<div class="form-grou">
+    <label>Màu dây</label>
+    <input type="text" value="T" name="mauday"/>
+</div>
+<div class="form-grou">
+    <label>Class</label>
+    <input type="text" value="T-T" name="class"/>
+</div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        let mausac = $('input[name=mausac]').val();
+        let mauday = $('input[name=mauday]').val();
+        let cl = $('input[name=class]').val();
+        $(".mausac button").on("click", function(){
+             mausac = $(this).attr('value');
+            $('input[name=mausac]').val(mausac);
+            cl = mausac + "-" + mauday;
+            $('input[name=class]').val(cl);
+            $("." + cl).click();
+        })
+        $(".mauday button").on("click", function(){
+            mauday = $(this).attr('value');
+            $('input[name=mauday]').val(mauday);
+            cl = mausac + "-" + mauday;
+            $('input[name=class]').val(cl);
+            $("." + cl).click();
+        })
+        $(".control-nav img").on("click", function(){
+            alert(1);
+            var src = $(this).attr("src");
+            $(".control-nav img").removeClass('active');
+            $(this).addClass("active");
+            $(".viewport img").attr("src", src);
+        })
+        $(".attribule button").on("click", function(){
+            $(this).parent().find('button').removeClass("selected");
+            $(this).addClass("selected");
+        })
+    })
+</script>
+</script>
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
         let plus_btns = document.querySelectorAll('#plus-button');
@@ -127,17 +176,6 @@
                 btn.nextElementSibling.value = (btn.nextElementSibling.value == 0) ? 0 : btn.nextElementSibling.value - 1;
             })
         })
-        $(".control-nav img").on("click", function(){
-            var src = $(this).attr("src");
-            $(".control-nav img").removeClass('active');
-            $(this).addClass("active");
-            $(".viewport img").attr("src", src);
-        })
-        $(".attribule button").on("click", function(){
-            $(this).parent().find('button').removeClass("selected");
-            $(this).addClass("selected");
-            var datafor = $(this).attr('data-for');
-            $("." + datafor).click();
-        })
+        
     });
 </script>
